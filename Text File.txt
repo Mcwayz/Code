@@ -1,0 +1,16 @@
+        <script src="js/jquery.main.js" type="text/javascript"></script>
+        <script type="text/javascript">
+            function getFaultType(val)
+            {
+                $.ajax({
+                    type: "POST",
+                    url : "getFault.php",
+                    data: 'fault='+val,
+                    success:function(data)
+                    {
+                        $("#problem_fault").html(data);
+                    }
+                });
+            }
+        </script>
+
